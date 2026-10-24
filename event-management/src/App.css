@@ -1,0 +1,934 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: #f6f6f6;
+  color: #000000;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+  height: 76px;
+  padding: 0 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #000000;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.18),
+    0 10px 25px rgba(0, 0, 0, 0.12);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar h2 {
+  font-family: 'Manrope', sans-serif;
+  color: #FFFFFF;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  letter-spacing: -0.7px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #FFFFFF;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #6D001A;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 42px 0 70px;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 34px;
+  font-weight: 800;
+
+  color: #000000;
+
+  letter-spacing: -1.2px;
+
+  margin-bottom: 5px;
+}
+
+.page-header p {
+  color: #666666;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box {
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  width: 390px;
+  height: 48px;
+
+  padding: 0 16px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #000000;
+
+  outline: none;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.04),
+    0 8px 18px rgba(0, 0, 0, 0.06);
+
+  transition: all 0.25s ease;
+}
+
+.search-box input::placeholder {
+  color: #888888;
+}
+
+.search-box input:focus {
+  border-color: #6D001A;
+
+  box-shadow:
+    0 0 0 3px rgba(109, 0, 26, 0.08),
+    0 8px 20px rgba(109, 0, 26, 0.10);
+}
+
+
+/* =====================================================
+   EVENT GRID
+===================================================== */
+
+.event-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =====================================================
+   EVENT CARD
+===================================================== */
+
+.event-card {
+  background: #FFFFFF;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    0 8px 20px rgba(0, 0, 0, 0.07),
+    0 20px 45px rgba(109, 0, 26, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(109, 0, 26, 0.25);
+
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.05),
+    0 12px 28px rgba(0, 0, 0, 0.10),
+    0 25px 55px rgba(109, 0, 26, 0.12);
+}
+
+
+/* =====================================================
+   CATEGORY
+===================================================== */
+
+.category {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 12px;
+
+  background: #6D001A;
+
+  color: #FFFFFF;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.6px;
+
+  box-shadow:
+    0 3px 8px rgba(109, 0, 26, 0.18);
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.event-card h3 {
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 21px;
+
+  font-weight: 800;
+
+  color: #000000;
+
+  letter-spacing: -0.6px;
+
+  margin: 14px 0 9px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.description {
+  color: #666666;
+
+  font-size: 13.5px;
+  font-weight: 500;
+
+  line-height: 1.65;
+
+  margin-bottom: 20px;
+
+  min-height: 45px;
+}
+
+
+/* =====================================================
+   EVENT INFORMATION
+===================================================== */
+
+.event-info {
+  border-top: 1px solid #eeeeee;
+
+  padding-top: 15px;
+}
+
+.event-info p {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #666666;
+
+  font-size: 12.5px;
+  font-weight: 500;
+
+  margin: 10px 0;
+}
+
+.event-info strong {
+  color: #000000;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   GENERAL BUTTON
+===================================================== */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+
+  padding: 0 17px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 12.5px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.btn-primary {
+  background: #6D001A;
+
+  color: #FFFFFF;
+
+  box-shadow:
+    0 3px 6px rgba(109, 0, 26, 0.20),
+    0 8px 18px rgba(109, 0, 26, 0.14);
+}
+
+.btn-primary:hover {
+  background: #520014;
+
+  box-shadow:
+    0 5px 10px rgba(109, 0, 26, 0.25),
+    0 12px 25px rgba(109, 0, 26, 0.20);
+}
+
+
+/* =====================================================
+   SUCCESS / CREATE BUTTON
+===================================================== */
+
+.btn-success {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  background: #6D001A;
+
+  color: #FFFFFF;
+
+  border-radius: 9px;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 12.5px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 3px 6px rgba(109, 0, 26, 0.20),
+    0 8px 18px rgba(109, 0, 26, 0.14);
+
+  transition: all 0.2s ease;
+}
+
+.btn-success:hover {
+  background: #520014;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 10px rgba(109, 0, 26, 0.25),
+    0 12px 25px rgba(109, 0, 26, 0.20);
+}
+
+
+/* =====================================================
+   DELETE BUTTON
+===================================================== */
+
+.btn-danger {
+  background: #FFFFFF;
+
+  color: #6D001A;
+
+  border: 1px solid #6D001A;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.2s ease;
+}
+
+.btn-danger:hover {
+  background: #6D001A;
+
+  color: #FFFFFF;
+
+  box-shadow:
+    0 5px 12px rgba(109, 0, 26, 0.20);
+}
+
+
+/* =====================================================
+   CARD BUTTONS
+===================================================== */
+
+.card-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.card-buttons .btn {
+  flex: 1;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-state {
+  background: #FFFFFF;
+
+  text-align: center;
+
+  padding: 70px 20px;
+
+  border-radius: 16px;
+
+  border: 1px solid #e5e5e5;
+
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 12px 30px rgba(0, 0, 0, 0.07),
+    0 25px 55px rgba(109, 0, 26, 0.05);
+}
+
+.empty-state h2 {
+  font-family: 'Manrope', sans-serif;
+
+  color: #000000;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  letter-spacing: -0.6px;
+
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #666666;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-container {
+  background: #FFFFFF;
+
+  width: 100%;
+
+  max-width: 650px;
+
+  margin: 40px auto;
+
+  padding: 32px;
+
+  border-radius: 16px;
+
+  border: 1px solid #e5e5e5;
+
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 12px 30px rgba(0, 0, 0, 0.08),
+    0 25px 55px rgba(109, 0, 26, 0.07);
+}
+
+.form-container h2 {
+  font-family: 'Manrope', sans-serif;
+
+  color: #000000;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  letter-spacing: -0.6px;
+
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #000000;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.form-control {
+  width: 100%;
+
+  min-height: 45px;
+
+  padding: 11px 12px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 9px;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 13.5px;
+  font-weight: 500;
+
+  color: #000000;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: #6D001A;
+
+  box-shadow:
+    0 0 0 3px rgba(109, 0, 26, 0.08),
+    0 5px 15px rgba(109, 0, 26, 0.06);
+}
+
+textarea.form-control {
+  min-height: 110px;
+
+  resize: vertical;
+}
+
+
+/* =====================================================
+   LOGIN PAGE
+===================================================== */
+
+.login-container {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #f6f6f6;
+}
+
+.login-form {
+  width: 370px;
+
+  padding: 36px;
+
+  background: #FFFFFF;
+
+  border-radius: 16px;
+
+  border-top: 5px solid #6D001A;
+
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 12px 30px rgba(0, 0, 0, 0.08),
+    0 25px 55px rgba(109, 0, 26, 0.10);
+}
+
+.login-form h2 {
+  font-family: 'Manrope', sans-serif;
+
+  text-align: center;
+
+  color: #000000;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  letter-spacing: -0.7px;
+
+  margin-bottom: 26px;
+}
+
+.login-form input {
+  width: 100%;
+
+  height: 47px;
+
+  padding: 0 13px;
+
+  margin-bottom: 15px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 9px;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 13.5px;
+  font-weight: 500;
+
+  color: #000000;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.login-form input::placeholder {
+  color: #888888;
+}
+
+.login-form input:focus {
+  border-color: #6D001A;
+
+  box-shadow:
+    0 0 0 3px rgba(109, 0, 26, 0.08),
+    0 5px 15px rgba(109, 0, 26, 0.06);
+}
+
+.login-form button {
+  width: 100%;
+
+  height: 47px;
+
+  margin-top: 5px;
+
+  background: #6D001A;
+
+  color: #FFFFFF;
+
+  border: none;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 13.5px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 4px 8px rgba(109, 0, 26, 0.20),
+    0 10px 20px rgba(109, 0, 26, 0.12);
+
+  transition: all 0.2s ease;
+}
+
+.login-form button:hover {
+  background: #520014;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 12px rgba(109, 0, 26, 0.25),
+    0 14px 28px rgba(109, 0, 26, 0.18);
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background: #FFFFFF;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+.table thead {
+  background: #000000;
+
+  color: #FFFFFF;
+}
+
+.table th {
+  padding: 15px;
+
+  text-align: left;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+}
+
+.table td {
+  padding: 14px 15px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  color: #555555;
+}
+
+.table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: #faf5f6;
+}
+
+
+/* =====================================================
+   TABLE ACTION BUTTONS
+===================================================== */
+
+.table td:last-child {
+  white-space: nowrap;
+}
+
+.table td .btn-success {
+  display: inline-flex;
+
+  min-height: 36px;
+
+  padding: 0 12px;
+
+  margin-right: 5px;
+
+  font-size: 11.5px;
+}
+
+.table td button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 36px;
+
+  padding: 0 12px;
+
+  background: #FFFFFF;
+
+  color: #6D001A;
+
+  border: 1px solid #6D001A;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 11.5px;
+  font-weight: 700;
+
+  transition: all 0.2s ease;
+}
+
+.table td button:hover {
+  background: #6D001A;
+
+  color: #FFFFFF;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1050px) {
+
+  .event-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .container {
+    width: 90%;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .container {
+    width: 92%;
+
+    padding-top: 32px;
+  }
+
+  .page-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+  .page-header h1 {
+    font-size: 29px;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .navbar {
+    height: 68px;
+  }
+
+  .navbar h2 {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .event-card {
+    padding: 21px;
+  }
+
+  .login-form {
+    width: 90%;
+
+    padding: 28px;
+  }
+
+}
